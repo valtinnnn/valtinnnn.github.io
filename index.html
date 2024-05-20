@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLEASE RECONSIDER </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d9534f;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #5cb85c;
+            color: white;
+        }
+        .no {
+            background-color: #d9534f;
+            color: white;
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function handleResponse(response) {
+            document.getElementById('initial-message').style.display = 'none';
+            document.getElementById('response-message').style.display = 'block';
+            if (response === 'yes') {
+                document.getElementById('response-message').innerText = 'YAYAYAYAYAYAY, ichat run ako lagi!!';
+            } else {
+                document.getElementById('response-message').innerText = 'I understand.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="initial-message">
+            <h1>Hi Adriane,</h1>
+            <p> Buhay ko rn ja na isipan and I know nga di mo man gusto or di kaw ready pero please daad isipon mo man ay para kanakon buhay buhay ang one year and if mag no kaw man ma respect ko ra amo lng mn ra gusto ko ma batian kanimo if gusto mo pa or hindi. I miss you so much.</p>
+            <p>Gusto mo mag cb kag iseryosohon run this time?</p>
+            <div class="buttons">
+                <button class="button yes" onclick="handleResponse('yes')">Yes</button>
+                <button class="button no" onclick="handleResponse('no')">No</button>
+            </div>
+        </div>
+        <div id="response-message" class="message"></div>
+    </div>
+</body>
+</html>
